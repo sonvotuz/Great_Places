@@ -1,8 +1,17 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.great_places">
+    <queries>
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE" />
+        </intent>
+    </queries>
+    <!-- <uses-permission android:name"=android.permission.ACCESS_FINE_LOCATION" /> -->
    <application
         android:label="great_places"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/ic_launcher"
+        android:requestLegacyExternalStorage="true">
+    <meta-data android:name="com.google.android.geo.API_KEY"
+               android:value="AIzaSyC-dFHYjTqEVLndbN2gdvXsx09jfJHmNc"/>
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
@@ -39,3 +48,4 @@
             android:value="2" />
     </application>
 </manifest>
+
